@@ -12,6 +12,8 @@ namespace CodingTest.Tests.Models
     [TestClass]
     public class ReadingTests
     {
+        // Checks the calculations for totalMag
+        
         [TestMethod]
         public void TotalMag_should_be_the_sum_of_other_3_mags()
         {
@@ -21,6 +23,8 @@ namespace CodingTest.Tests.Models
             sut.MaxZ = 8;
             sut.TotalMag.Should().Equal(16M);
         }
+
+        // Checks the calculations for total Gravity GravTotal = (GravX + GravY)/GravZ 
         [TestMethod]
         public void GravTotal_should_be_the_sum_of_firsttwo_dividedby3rdgrav()
         {

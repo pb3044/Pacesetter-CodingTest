@@ -21,7 +21,7 @@ namespace CodingTest.Controllers
             _dc = dc;
         }
 
-        // GET: Readings
+        // GET: Readings sorted by Depth Asc order 
         public async Task<ActionResult> Index()
         {
             return View(await _dc.Readings.AsQueryable().OrderBy(p => p.Depth).ToListAsync());
